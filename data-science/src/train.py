@@ -170,6 +170,7 @@ def main():
     rmse = np.sqrt(mse)
     mae = mean_absolute_error(y_train, yhat_train)
 
+    # Log metrics
     mlflow.log_metric("train r2", r2)
     mlflow.log_metric("train mse", mse)
     mlflow.log_metric("train rmse", rmse)
