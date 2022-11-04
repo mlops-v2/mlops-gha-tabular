@@ -2,6 +2,12 @@ name: deploy-batch-endpoint-pipeline
 
 on: 
   workflow_dispatch:
+  push:
+    branches:
+      - 'main'
+      - 'releases/**'
+    paths: 
+      - 'mlops/azureml/deploy/batch/**'
 jobs:
   get-config:
       uses: mlops-v2/mlops-templates/.github/workflows/read-yaml.yml@main
