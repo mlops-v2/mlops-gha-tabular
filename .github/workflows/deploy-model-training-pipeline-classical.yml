@@ -6,6 +6,8 @@ on:
     branches:
       - 'main'
       - 'releases/**'
+    paths: 
+      - 'data-science/src/**'
 jobs:
   get-config:
       uses: mlops-v2/mlops-templates/.github/workflows/read-yaml.yml@main
