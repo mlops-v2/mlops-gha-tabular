@@ -151,7 +151,7 @@ def main():
                                   min_samples_split = args.regressor__min_samples_split,
                                   random_state=0)
 
-    # Log metrics
+    # Log metrics using mlflow
     mlflow.log_param("model", "RandomForestRegressor")
     mlflow.log_param("n_estimators", args.regressor__n_estimators)
     mlflow.log_param("bootstrap", args.regressor__bootstrap)
